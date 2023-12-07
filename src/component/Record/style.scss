@@ -1,0 +1,67 @@
+@import '../../index.scss';
+
+.record_container {
+    padding: 30px 20px;
+
+    .heading_tittle {
+        font-size: 36px;
+        line-height: normal;
+        font-weight: 700;
+        color: $primary;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .Table_main {
+        width: 100%;
+        height: 100%;
+        margin: 20px 0;
+
+        thead {
+            tr {
+                th {
+                    &:first-child {
+                        text-align: start;
+                        padding: 6px 10px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    &:first-child {
+                        text-align: start;
+                        padding: 6px 10px;
+                    }
+
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .pagination_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+
+        button {
+            padding: 6px 10px;
+            border: none;
+            background-color: $primary;
+            color: $white;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 400;
+            cursor: pointer;
+
+            &:disabled {
+                background: rgba($primary, 0.3);
+            }
+
+        }
+    }
+}
