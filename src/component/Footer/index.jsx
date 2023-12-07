@@ -32,6 +32,9 @@ const Footer = () => {
                             <li className={"footerMenuItem"} >
                                 <Link to="/contact" >Contact us</Link>
                             </li>
+                            <li className={"footerMenuItem"} >
+                                <Link to="/record" >Record</Link>
+                            </li>
                         </ul>
                     </div>
                     <div className={"location_warp"}>
