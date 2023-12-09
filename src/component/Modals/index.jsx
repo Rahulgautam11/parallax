@@ -27,15 +27,9 @@ export function Modals({ children, fade = true, defaultOpened = false, ModalsSiz
         }
     }, [close])
 
-    const manageBrowserBtn = () => {
 
-        if (ref?.current?.isOpen) {
-            window.history.pushState(null, null, window.location.href);
-        }
-    }
     useEffect(() => {
         if (isOpen) document.addEventListener('keydown', handleEscape, false)
-        manageBrowserBtn()
         return () => {
             document.removeEventListener('keydown', handleEscape, false)
         }
