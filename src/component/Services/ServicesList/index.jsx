@@ -39,7 +39,7 @@ const ServiceList = () => {
         setData([...data, e])
 
     }
-    console.log(data)
+
     const closePopup = () => {
         openRef.current.close();
     }

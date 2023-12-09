@@ -21,26 +21,12 @@ export function Modals({ children, fade = true, defaultOpened = false, ModalsSiz
     }), [close, isOpen])
 
     const handleEscape = useCallback(event => {
-        if (event.keyCode === 27) close()
+        if (event.keyCode === 27) {
+            close()
+            ClosePopUp()
+        }
     }, [close])
 
-    const onTop = () => {
-        window.scrollTo(0, 0);
-    }
-    const manageBodyScroll = () => {
-        if (isOpen === true) {
-            document.body.classList.add('avoidscroll');
-            window.onpopstate = function () {
-                window.history.go(0);
-                manageBrowserBtn()
-                close();
-                onTop()
-            };
-        }
-        else {
-            document.body.classList.remove('avoidscroll');
-        }
-    }
     const manageBrowserBtn = () => {
 
         if (ref?.current?.isOpen) {
@@ -49,7 +35,6 @@ export function Modals({ children, fade = true, defaultOpened = false, ModalsSiz
     }
     useEffect(() => {
         if (isOpen) document.addEventListener('keydown', handleEscape, false)
-        manageBodyScroll()
         manageBrowserBtn()
         return () => {
             document.removeEventListener('keydown', handleEscape, false)

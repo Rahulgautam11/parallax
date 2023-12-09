@@ -64,6 +64,7 @@ const DataTable = () => {
 
     return (
         <div className='record_container'>
+
             <h1 className='heading_tittle'>HERE SOME RECORD OF OUR CLIENT </h1>
             <Searchbar
                 type="text"
@@ -110,6 +111,8 @@ const DataTable = () => {
                     Next
                 </button>
             </div>
+
+
         </div>
     );
 }
