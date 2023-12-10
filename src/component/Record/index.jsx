@@ -48,11 +48,7 @@ const DataTable = () => {
         let filteredData = data;
 
         if (searchTerm) {
-            filteredData = data.filter((row) => {
-                return Object.values(row).some((value) =>
-                    String(value).toLowerCase().includes(searchTerm.toLowerCase())
-                );
-            });
+            filteredData = data.filter((item) => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
         }
         return filteredData;
     }, [data, searchTerm]);
