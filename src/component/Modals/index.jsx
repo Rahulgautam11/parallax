@@ -16,7 +16,7 @@ export function Modals({ children, fade = true, defaultOpened = false, ModalsSiz
 
     useImperativeHandle(ref, () => ({
         open: () => setIsOpen(true),
-        close
+        close: () => setIsOpen(false)
     }), [close, isOpen])
 
     const handleEscape = useCallback(event => {
