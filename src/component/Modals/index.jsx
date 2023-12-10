@@ -15,7 +15,6 @@ export function Modals({ children, fade = true, defaultOpened = false, ModalsSiz
     }
 
     useImperativeHandle(ref, () => ({
-        isOpen: isOpen,
         open: () => setIsOpen(true),
         close
     }), [close, isOpen])
