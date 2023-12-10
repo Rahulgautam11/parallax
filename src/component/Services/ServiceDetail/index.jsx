@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Image1 from '../../../Assets/Image/image12.jpg'
 import './style.scss'
@@ -8,6 +8,9 @@ const ServiceDetail = () => {
     const HandleBack = () => {
         navigate(-1)
     }
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className='Service_detail_main'>
             <button className='back_btn' onClick={() => HandleBack()}>&#8592; back</button>

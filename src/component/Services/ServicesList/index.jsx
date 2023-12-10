@@ -32,6 +32,7 @@ const ServiceList = () => {
 
     useEffect(() => {
         Aos.init({ duration: 1200, });
+        window.scrollTo(0, 0)
     }, [])
 
     const HandleOpen = (e) => {
