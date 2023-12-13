@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Searchbar from '../../common/Searchbar/Searchbar';
 import './style.scss'
 
@@ -43,6 +43,9 @@ const DataTable = () => {
         setSearchTerm(event.target.value);
         setCurrentPage(0);
     };
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const filteredAndSortedData = useMemo(() => {
         let filteredData = data;

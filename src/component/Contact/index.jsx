@@ -1,10 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './style.scss'
 import FormInput from '../../common/FormInput'
 import TextArea from '../../common/TextArea'
 
 
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div className="contact_container">
